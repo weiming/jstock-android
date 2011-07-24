@@ -31,7 +31,7 @@
                     android:text="PUBIC BANK BHD"
                     android:layout_height="wrap_content"
                     android:layout_width="fill_parent"
-                    android:layout_weight="1" />		                                 
+                    android:layout_weight="1" />                              
                 <TextView
                     android:id="@+id/stock_code"
                     android:gravity="right"
@@ -46,8 +46,8 @@
             <TextView
                 android:id="@+id/price_label"
                 android:text="Price"
-	            android:layout_width="0dip"
-	            android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_weight="1"
                 android:background="#000000"
                 android:paddingTop="2dip"
                 android:paddingLeft="2dip"
@@ -58,13 +58,13 @@
                 android:gravity="right"
                 android:text="13.42"
                 android:paddingRight="3dp"
-				android:layout_width="0dip"
-				android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_weight="1"
                 android:background="#000000"
                 android:paddingTop="2dip"
                 android:paddingBottom="2dip"
                 android:layout_marginBottom="1dp" 
-                android:layout_marginRight="1dp" />				                          
+                android:layout_marginRight="1dp" />                    
             <TextView
                 android:id="@+id/change_label"
                 android:text="Change"
@@ -105,13 +105,13 @@
                 android:gravity="right"
                 android:text="100"
                 android:paddingRight="3dp"
-				android:layout_width="0dip"
-				android:layout_weight="1"
+                android:layout_width="0dip"
+                android:layout_weight="1"
                 android:background="#000000"
                 android:paddingTop="2dip"
                 android:paddingBottom="2dip"
                 android:layout_marginBottom="1dp" 
-                android:layout_marginRight="1dp" />				                      
+                android:layout_marginRight="1dp" />
             <TextView
                 android:id="@+id/value_label"
                 android:text="Value"
