@@ -19,16 +19,30 @@
 
 package org.yccheok.jstock.activity;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.TextView;
+import java.util.ArrayList;
 
-public class BuyActivity extends Activity {
+import org.yccheok.jstock.portfolio.Order;
+import org.yccheok.jstock.widget.OrderAdapter;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+
+public class BuyActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        TextView textview = new TextView(this);
-        textview.setText("This is the Buy tab");
-        setContentView(textview);
+        setContentView(R.layout.transaction_list_view);
+        
+        OrderAdapter orderAdapter = new OrderAdapter(this, R.layout.custom_row_view, new ArrayList<Order>());
+        setListAdapter(orderAdapter);
+        
+        Order o1 = new Order();
+        o1.setOrderName("SF services");
+        o1.setOrderStatus("Pending");
+        orderAdapter.add(o1);
+        
+        Order o2 = new Order();
+        o2.setOrderName("SF Advertisement");
+        o2.setOrderStatus("Completed");
+        orderAdapter.add(o2);
     }
 }
