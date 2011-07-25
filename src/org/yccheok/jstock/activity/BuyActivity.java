@@ -21,8 +21,8 @@ package org.yccheok.jstock.activity;
 
 import java.util.ArrayList;
 
-import org.yccheok.jstock.portfolio.Order;
-import org.yccheok.jstock.widget.OrderAdapter;
+import org.yccheok.jstock.portfolio.TransactionSummary;
+import org.yccheok.jstock.widget.BuyTransactionSummaryAdapter;
 
 import android.app.ListActivity;
 import android.os.Bundle;
@@ -30,19 +30,16 @@ import android.os.Bundle;
 public class BuyActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.transaction_list_view);
+        setContentView(R.layout.buy_activity_view);
         
-        OrderAdapter orderAdapter = new OrderAdapter(this, R.layout.custom_row_view, new ArrayList<Order>());
-        setListAdapter(orderAdapter);
-        
-        Order o1 = new Order();
-        o1.setOrderName("SF services");
-        o1.setOrderStatus("Pending");
-        orderAdapter.add(o1);
-        
-        Order o2 = new Order();
-        o2.setOrderName("SF Advertisement");
-        o2.setOrderStatus("Completed");
-        orderAdapter.add(o2);
+        BuyTransactionSummaryAdapter buyTransactionSummaryAdapter = new BuyTransactionSummaryAdapter(this, R.layout.buy_activity_row_view, getTransactionSummary());
+        setListAdapter(buyTransactionSummaryAdapter);
+    }
+    
+    private ArrayList<TransactionSummary> getTransactionSummary() {
+        ArrayList<TransactionSummary> transactionSummaries = new ArrayList<TransactionSummary>();
+        TransactionSummary transactionSummary = new TransactionSummary(); 
+        transactionSummaries.add(transactionSummary);
+        return transactionSummaries;
     }
 }
